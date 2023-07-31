@@ -60,13 +60,23 @@ class CartScreen extends StatelessWidget {
                         },
                       ),
                     ),
-                    // subtotal text
-                    ctmText('Subtotal: ₹${subtotal.toStringAsFixed(2)}'),
-                    // shippingCharge text
-                    ctmText(
-                        'Shipping Charge: ₹${shippingCharge.toStringAsFixed(2)}'),
-                    // Grand Total text
-                    ctmText('Grand Total: ₹${grandTotal.toStringAsFixed(2)}'),
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 93, 123, 184),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        children: [
+                          // subtotal text
+                          ctmText('Subtotal: ₹${subtotal.toStringAsFixed(2)}'),
+                          // shippingCharge text
+                          ctmText(
+                              'Shipping Charge: ₹${shippingCharge.toStringAsFixed(2)}'),
+                          // Grand Total text
+                          ctmText(
+                              'Grand Total: ₹${grandTotal.toStringAsFixed(2)}'),
+                        ],
+                      ),
+                    )
                   ],
                 ),
     );
@@ -74,7 +84,10 @@ class CartScreen extends StatelessWidget {
 
   ctmText(nameAndPrice) {
     return ListTile(
-      title: Text(nameAndPrice),
+      title: Text(
+        nameAndPrice,
+        style: TextStyle(color: Colors.white),
+      ),
     );
   }
 }

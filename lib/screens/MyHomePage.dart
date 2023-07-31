@@ -23,7 +23,10 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: [
           //search icon
           InkWell(
-            onTap: () => const SearchProduct(),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SearchProduct()));
+            },
             child: const Padding(
               padding: EdgeInsets.only(right: 10.0, top: 3),
               child: Icon(

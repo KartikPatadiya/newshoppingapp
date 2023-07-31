@@ -208,7 +208,7 @@ class _AddToCartDialogState extends State<AddToCartDialog> {
               );
             }
           },
-          //text of button
+          //text of buttonn
           child: const Text('Add to Cart'),
         ),
         const SizedBox(
